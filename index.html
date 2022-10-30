@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"
+        integrity="sha512-bHeT+z+n8rh9CKrSrbyfbINxu7gsBmSHlDCb3gUF1BjmjDzKhoKspyB71k0CIRBSjE5IVQiMMVBgCWjF60qsvA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.js"
+        integrity="sha512-alPPV0FSr6mYlSRf3QgbZmEqL7o99K5e30hGX+FrqDwMhnTngIeshurUAuKFDG28IzPSCSWTwmEfN0wBjg19KQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="main">
+
+
+        <form onSubmit= "postInfo(); return false ">
+        
+        <div id="innerform">
+        <h2 id="R-form">Registration Form</h2>
+        <br /><br />
+        <b> First Name:</b> <br />
+        <input type="text"  placeholder="Enter First Name" id="first" />
+        <br />
+        
+        <b>Last Name:</b> <br />
+        <input type="text" name="" id="last" placeholder="Enter Last Name"/>
+        <br />
+        <b>Enter Age:</b> <br />
+        <input type="text"  placeholder="Enter Age" id="age" />
+        <br />
+        <b>Destination:</b> <br />
+        <input type="text" name="" id="Destination" placeholder="Enter Qualification"/>
+        
+        <br/>
+        
+        <b>Price Range:</b> <br />
+        <input type="text"  placeholder="25000 Rs - 50000 Rs" id="price-Range" />
+        <br/>
+        
+        <b>No Of Members:</b> <br />
+        <input type="text" name="" id="Members" placeholder="No of Members"/>
+        <br/>
+        
+        <b>Enter Email:</b> <br />
+        <input type="email" name="" id="email" placeholder="example@gmail.com"/>
+        <br/>
+        
+        <b>Enter Phone No: </b><br />
+        <input type="number" name="" id="Number" placeholder="Enter Contact No"/>
+        <br />
+        
+        <input type="radio" name="fav_language" /> By Air<input type="radio" name="fav_language"/>By Bus <input type="radio"  name="fav_language" />By Train
+        <br /><br />
+        <button type="submit">Submit</button>
+        
+        <br />
+        <div id="mine">
+            <h6><b><u>Made by Hiten Vendani</u></b></h6>
+        </div>
+        </div>
+    </div>
+        </form>
+        
+        <script>
+
+        
+        console.log("document.location.protocol: ", document.location.protocol);
+
+        let baseUrl = (document.location.protocol === "https:") ?
+            "https://clean-beanie-fawn.cyclic.app" : "http://localhost:3000";
+
+        function postsubmit() {
+
+            let submitText = document.querySelector("#submit").value
+
+            axios.post(`${baseUrl}/submit`, {
+                text: submitText
+            })
+                .then(function (response) {
+                    console.log(response.data);
+
+
+                          
+                })
+                
+                .catch(function (error) {
+                    console.log(error);
+                })
+
+        }
+</script>
+        
+       
+
+</body>
+</html>

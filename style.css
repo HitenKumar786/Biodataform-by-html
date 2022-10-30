@@ -1,0 +1,133 @@
+#main{
+display: flex;
+flex-wrap: wrap;
+justify-content:center;
+align-content: center;
+border: 2px solid black;
+background-image: url('./img.jpg');
+background-size: 1280px 1080px;
+background-repeat: no-repeat;
+margin: 0;
+padding: 25px;
+overflow-y: hidden;
+background-attachment:local;
+
+}
+
+form{
+  padding: 50px;
+width: 250px;
+height: 750px;
+border: 2px  black;
+margin-top: 5px;
+background-color:white ;
+border-radius: 25px;
+opacity: .7;
+}
+
+#mine{
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+form:hover{
+  
+  opacity: 1;
+  
+
+}
+
+#innerform{
+
+  margin-top: -40px;
+  background-color: transparent;
+ 
+}
+
+#R-form{
+
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+#first{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  width: 250px;
+  height: 30px;
+  margin-left: -10px;                                     ;
+}
+
+#last{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  width: 250px;
+  height: 30px;
+  margin-left: -10px;  
+}
+
+#age{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  width: 250px;
+  height: 30px;
+  margin-left: -10px;  
+}
+
+#Destination{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  width: 250px;
+  height: 30px;
+  margin-left: -10px;  
+}
+ 
+#price-Range{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  width: 250px;
+  height: 30px;
+  margin-left: -10px;  
+}
+
+#Members{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  width: 250px;
+  height: 30px;
+  margin-left: -10px;  
+}
+
+#email{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  width: 250px;
+  height: 30px;
+  margin-left: -10px;  
+}
+
+#Number{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  width: 250px;
+  height: 30px;
+  margin-left: -10px;  
+}
+
+button{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  margin-left: 80px;
+  
+  padding: 15px;
+}
