@@ -19,7 +19,7 @@
     <div id="main">
 
 
-        <form onSubmit= "postInfo(); return false ">
+        <form onSubmit= "postSubmit();return false ">
         
         <div id="innerform">
         <h2 id="R-form">Registration Form</h2>
@@ -35,12 +35,12 @@
         <input type="text"  placeholder="Enter Age" id="age" />
         <br />
         <b>Destination:</b> <br />
-        <input type="text" name="" id="Destination" placeholder="Enter Qualification"/>
+        <input type="text" name="" id="Destination" placeholder=" Where Want To Go"/>
         
         <br/>
         
         <b>Price Range:</b> <br />
-        <input type="text"  placeholder="25000 Rs - 50000 Rs" id="price-Range" />
+        <input type="text"  placeholder="25000 Rs - 50000 Rs" id="price-Range" min="25000" max="50000" />
         <br/>
         
         <b>No Of Members:</b> <br />
@@ -57,7 +57,7 @@
         
         <input type="radio" name="fav_language" /> By Air<input type="radio" name="fav_language"/>By Bus <input type="radio"  name="fav_language" />By Train
         <br /><br />
-        <button type="submit">Submit</button>
+        <button type="submit" onclick="submit">Submit</button>
         
         <br />
         <div id="mine">
@@ -73,9 +73,9 @@
         console.log("document.location.protocol: ", document.location.protocol);
 
         let baseUrl = (document.location.protocol === "https:") ?
-            "https://clean-beanie-fawn.cyclic.app" : "http://localhost:3000";
+            "https://wild-teal-chick.cyclic.app" : "http://localhost:3000";
 
-        function postsubmit() {
+        function postSubmit() {
 
             let submitText = document.querySelector("#submit").value
 

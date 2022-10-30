@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 
 
 let submitSchema = new mongoose.Schema({
-text:{type:String, Required:true},
+text:{type:String,type:Number, Required:true},
 ClassId:String,
 CreatedOn:{type:Date, default:Date.now},
 });

@@ -10,11 +10,13 @@ background-repeat: no-repeat;
 margin: 0;
 padding: 25px;
 overflow-y: hidden;
-background-attachment:local;
+background-attachment:scroll;
 
 }
 
 form{
+  display: flex;
+  flex-wrap: wrap;
   padding: 50px;
 width: 250px;
 height: 750px;
@@ -23,12 +25,15 @@ margin-top: 5px;
 background-color:white ;
 border-radius: 25px;
 opacity: .7;
+background-attachment:fixed;
 }
 
 #mine{
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-content: flex-end;
+  background-attachment:fixed;
 }
 form:hover{
   
@@ -38,22 +43,23 @@ form:hover{
 }
 
 #innerform{
-
+  display: flex;
+  flex-wrap: wrap;
   margin-top: -40px;
   background-color: transparent;
+  background-attachment:fixed;
  
 }
 
 #R-form{
 
-display: flex;
+  display: flex;
+  flex-wrap: wrap;
 justify-content: center;
 align-content: center;
 }
 
 #first{
-  display: flex;
-  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -61,8 +67,6 @@ align-content: center;
 }
 
 #last{
-  display: flex;
-  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -70,8 +74,6 @@ align-content: center;
 }
 
 #age{
-  display: flex;
-  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -79,8 +81,6 @@ align-content: center;
 }
 
 #Destination{
-  display: flex;
-  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -88,8 +88,6 @@ align-content: center;
 }
  
 #price-Range{
-  display: flex;
-  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -97,8 +95,6 @@ align-content: center;
 }
 
 #Members{
-  display: flex;
-  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -106,8 +102,6 @@ align-content: center;
 }
 
 #email{
-  display: flex;
-  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -115,8 +109,6 @@ align-content: center;
 }
 
 #Number{
-  display: flex;
-  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -124,8 +116,6 @@ align-content: center;
 }
 
 button{
-  display: flex;
-  flex-wrap: wrap;
   border-radius: 25px;
   margin-left: 80px;
   
