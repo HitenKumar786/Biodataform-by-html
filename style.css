@@ -15,11 +15,10 @@ background-attachment:scroll;
 }
 
 form{
-  display: flex;
-  flex-wrap: wrap;
+
   padding: 50px;
 width: 250px;
-height: 750px;
+height: 740px;
 border: 2px  black;
 margin-top: 5px;
 background-color:white ;
@@ -43,8 +42,7 @@ form:hover{
 }
 
 #innerform{
-  display: flex;
-  flex-wrap: wrap;
+
   margin-top: -40px;
   background-color: transparent;
   background-attachment:fixed;
@@ -60,6 +58,8 @@ align-content: center;
 }
 
 #first{
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -67,6 +67,8 @@ align-content: center;
 }
 
 #last{
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -74,6 +76,8 @@ align-content: center;
 }
 
 #age{
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -81,6 +85,8 @@ align-content: center;
 }
 
 #Destination{
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -88,6 +94,8 @@ align-content: center;
 }
  
 #price-Range{
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -95,6 +103,8 @@ align-content: center;
 }
 
 #Members{
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -102,6 +112,8 @@ align-content: center;
 }
 
 #email{
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -109,6 +121,8 @@ align-content: center;
 }
 
 #Number{
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 25px;
   width: 250px;
   height: 30px;
@@ -116,6 +130,8 @@ align-content: center;
 }
 
 button{
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 25px;
   margin-left: 80px;
   
