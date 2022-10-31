@@ -19,7 +19,7 @@
     <div id="main">
 
 
-        <form onSubmit= "postSubmit();return false ">
+        <form id="form" onSubmit= "postSubmit();return false ">
         
         <div id="innerform">
         <h2 id="R-form">Registration Form</h2>
@@ -34,7 +34,7 @@
         <b>Enter Age:</b> <br />
         <input type="text"  placeholder="Enter Age" id="age" />
         <br />
-        <b>Destination:</b> <br />
+        <!-- <b>Destination:</b> <br />
         <input type="text" name="" id="Destination" placeholder=" Where Want To Go"/>
         
         <br/>
@@ -56,8 +56,8 @@
         <br />
         
         <input type="radio" name="fav_language" /> By Air<input type="radio" name="fav_language"/>By Bus <input type="radio"  name="fav_language" />By Train
-        <br /><br />
-        <button type="submit" onclick="submit"><a href="./response.html" style="text-decoration:none" id="link">Done</a></button>
+        <br /><br /> -->
+        <button type="submit" onclick="submit">Submit</button>
         
         <br />
         <div id="mine">
@@ -77,10 +77,25 @@
 
         function postSubmit() {
 
-            let submitText = document.querySelector("#submit").value
-
+            let firstNameText = document.querySelector("#first").value
+                  document.querySelector("#first").innerHTML = "";
+            let lastNameText = document.querySelector("#last").value
+            let ageText = document.querySelector("#age").value
+            let destinationText = document.querySelector("#Destination").value
+            let priceText = document.querySelector("#price-Range").value
+            let membersText = document.querySelector("#Members").value
+            let emailText = document.querySelector("#email").value
+            let contactText = document.querySelector("#Number").value
             axios.post(`${baseUrl}/submit`, {
-                text: submitText
+                text: firstNameText,
+                text: lastNameText,
+                text: ageText,
+                text: destinationText,
+                text: priceText,
+                text: membersText,
+                text:emailText,
+                text:contactText,
+                
             })
                 .then(function (response) {
                     console.log(response.data);
