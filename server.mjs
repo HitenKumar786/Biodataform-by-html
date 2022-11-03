@@ -12,7 +12,10 @@ priceText:      {type:Number, Required:true},
 membersText:    {type:Number, Required:true},
 emailText:      {type:String, Required:true},
 contactText:    {type:Number, Required:true},
-// travelTypeText: {type:String, Required:true},
+// travelByAirText:{type:Boolean, Required:true}, 
+// travelByBusText:{type:Boolean, Required:true}, 
+// travelByTrainText:{type:Boolean, Required:true},
+
 ClassId:String,
 CreatedOn:{type:Date, default:Date.now},
 });
@@ -32,15 +35,17 @@ app.use(cors());
 app.post('/submit',(req,res)=>{
 submitModel.create({
     
-    firstNameText:  req.body.firstNameText,  
-    lastNameText:   req.body.lastNameText,   
-    ageText:        req.body.ageText,        
-    destinationText:req.body.destinationText,
-    priceText:      req.body.priceText,      
-    membersText:    req.body.membersText,    
-    emailText:      req.body.emailText,      
-    contactText:    req.body.contactText,    
-    // travelTypeText: req.body.travelTypeText, 
+    firstNameText:     req.body.firstNameText,  
+    lastNameText:      req.body.lastNameText,   
+    ageText:           req.body.ageText,        
+    destinationText:   req.body.destinationText,
+    priceText:         req.body.priceText,      
+    membersText:       req.body.membersText,    
+    emailText:         req.body.emailText,      
+    contactText:       req.body.contactText,    
+    // travelByAirText:   req.body.travelByAirText,
+    // travelByBusText:   req.body.travelByBusText,
+    // travelByTrainText: req.body.travelByTrainText,
 },(err,saved)=>{
     if(!err){
 

@@ -56,7 +56,7 @@
         <br />
         
        
-        <input type="radio" name="fav_language" class="travelType"/> By Air<input type="radio" name="fav_language" class="travelType"/>By Bus <input type="radio"  name="fav_language" class="travelType"/>By Train
+        <input type="radio" name="fav_language" id="travelByAir"/> By Air<input type="radio" name="fav_language" class="travelBYBus"/>By Bus <input type="radio"  name="fav_language" class="travelByTrain"/>By Train
    
         <br /><br />
         <button type="submit" onclick="submit">Submit</button>
@@ -88,7 +88,9 @@
             let membersText = document.querySelector("#Members").value
             let emailText = document.querySelector("#email").value
             let contactText = document.querySelector("#Number").value
-            // let travelTypeText = document.querySelector(".travelType").value
+            // let travelByAirText = document.querySelector("#traveByAir").value
+            // let travelByBusText = document.querySelector("#traveByBus").value
+            // let travelByTrainText = document.querySelector("#traveByTrain").value
             
         
             const dataObject={
@@ -100,7 +102,10 @@
                 membersText,
                 emailText,
                 contactText,
-                // travelTypeText
+                // travelByAirText,
+                // travelByBusText,
+                // travelByTrainText,
+               
             }
           
             axios.post(`${baseUrl}/submit`, {
@@ -112,7 +117,9 @@
                 membersText,
                 emailText,
                 contactText,
-                // travelTypeText
+                // travelByAirText,
+                // travelByBusText,
+                // travelByTrainText,
             })
                 .then(function (response) {
                     console.log(response.data);
