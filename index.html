@@ -34,7 +34,7 @@
         <b>Enter Age:</b> <br />
         <input type="text"  placeholder="Enter Age" id="age" />
         <br />
-        <!-- <b>Destination:</b> <br />
+        <b>Destination:</b> <br />
         <input type="text" name="" id="Destination" placeholder=" Where Want To Go"/>
         
         <br/>
@@ -55,8 +55,10 @@
         <input type="number" name="" id="Number" placeholder="Enter Contact No"/>
         <br />
         
-        <input type="radio" name="fav_language" /> By Air<input type="radio" name="fav_language"/>By Bus <input type="radio"  name="fav_language" />By Train
-        <br /><br /> -->
+       
+        <input type="radio" name="fav_language" class="travelType"/> By Air<input type="radio" name="fav_language" class="travelType"/>By Bus <input type="radio"  name="fav_language" class="travelType"/>By Train
+   
+        <br /><br />
         <button type="submit" onclick="submit">Submit</button>
         
         <br />
@@ -86,16 +88,31 @@
             let membersText = document.querySelector("#Members").value
             let emailText = document.querySelector("#email").value
             let contactText = document.querySelector("#Number").value
+            // let travelTypeText = document.querySelector(".travelType").value
+            
+        
+            const dataObject={
+                firstNameText,
+                lastNameText,
+                ageText,
+                destinationText,
+                priceText,
+                membersText,
+                emailText,
+                contactText,
+                // travelTypeText
+            }
+          
             axios.post(`${baseUrl}/submit`, {
-                text: firstNameText,
-                text: lastNameText,
-                text: ageText,
-                text: destinationText,
-                text: priceText,
-                text: membersText,
-                text:emailText,
-                text:contactText,
-                
+                firstNameText,
+                lastNameText,
+                ageText,
+                destinationText,
+                priceText,
+                membersText,
+                emailText,
+                contactText,
+                // travelTypeText
             })
                 .then(function (response) {
                     console.log(response.data);

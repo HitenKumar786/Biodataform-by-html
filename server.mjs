@@ -1,17 +1,18 @@
-import express, { text } from 'express';
+import express, { request, text } from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 
 
 let submitSchema = new mongoose.Schema({
-text:{type:String, Required:true},
-text:{type:String, Required:true},
-text:{type:Number, Required:true},
-text:{type:String, Required:true},
-text:{type:Number, Required:true},
-text:{type:Number, Required:true},
-text:{type:String, Required:true},
-text:{type:Number, Required:true},
+firstNameText:  {type:String, Required:true},
+lastNameText:   {type:String, Required:true},
+ageText:        {type:Number, Required:true},
+destinationText:{type:String, Required:true},
+priceText:      {type:Number, Required:true},
+membersText:    {type:Number, Required:true},
+emailText:      {type:String, Required:true},
+contactText:    {type:Number, Required:true},
+// travelTypeText: {type:String, Required:true},
 ClassId:String,
 CreatedOn:{type:Date, default:Date.now},
 });
@@ -29,8 +30,18 @@ app.use(cors());
 //////////////////PUSH//////////////////////
 
 app.post('/submit',(req,res)=>{
-
-submitModel.create({text:req.body.text},(err,saved)=>{
+submitModel.create({
+    
+    firstNameText:  req.body.firstNameText,  
+    lastNameText:   req.body.lastNameText,   
+    ageText:        req.body.ageText,        
+    destinationText:req.body.destinationText,
+    priceText:      req.body.priceText,      
+    membersText:    req.body.membersText,    
+    emailText:      req.body.emailText,      
+    contactText:    req.body.contactText,    
+    // travelTypeText: req.body.travelTypeText, 
+},(err,saved)=>{
     if(!err){
 
         console.log(saved);
