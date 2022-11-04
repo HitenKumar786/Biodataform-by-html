@@ -139,8 +139,33 @@ button{
 
 }
 
-/* #link{
+#Submitbody{
+  
+  background-image: url('./img.jpg');
+}
 
-  color: black;
 
-} */
+#submitPageParent{
+  background-image: url('./img.jpg');
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  border-radius: 25px;
+  width: 300px;
+  height: 300px;
+margin-left: 500px;
+margin-top: 150px;
+}
+
+#submitPageChild{
+padding: 25px;
+  justify-content: center;
+  align-content: center;
+  margin-top: 30px;
+}
+
+#response{
+  display: flex;
+  
+margin-top: 60px;
+}
