@@ -12,9 +12,7 @@ priceText:      {type:Number, Required:true},
 membersText:    {type:Number, Required:true},
 emailText:      {type:String, Required:true},
 contactText:    {type:Number, Required:true},
-// travelByAirText:{type:Boolean, Required:true}, 
-// travelByBusText:{type:Boolean, Required:true}, 
-// travelByTrainText:{type:Boolean, Required:true},
+travelMediumText:{type:String,Required:true},
 
 ClassId:String,
 CreatedOn:{type:Date, default:Date.now},
@@ -43,9 +41,7 @@ submitModel.create({
     membersText:       req.body.membersText,    
     emailText:         req.body.emailText,      
     contactText:       req.body.contactText,    
-    // travelByAirText:   req.body.travelByAirText,
-    // travelByBusText:   req.body.travelByBusText,
-    // travelByTrainText: req.body.travelByTrainText,
+    travelMediumText:  req.body.travelMediumText,    
 },(err,saved)=>{
     if(!err){
 
